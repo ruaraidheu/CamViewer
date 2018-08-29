@@ -192,6 +192,7 @@ namespace Cam_Program
         public int Wc { get => wc; set => wc = value; }
         public int Hc { get => hc; set => hc = value; }
         public bool LockAspectRatio { get => lockaspectratio; set => lockaspectratio = value; }
+        public bool PluginsEnabled { get; set; } = false;
         public List<Slotdata> Sd { get => sd; set => sd = value; }
         public bool ReadOnly { get => readOnly; set => readOnly = value; }
         public bool Askfiledeletecrash { get => askfiledeletecrash; set => askfiledeletecrash = value; }
@@ -375,11 +376,11 @@ namespace Cam_Program
                     string dr;
                     if (e.InnerException != null)
                     {
-                        dr = Ruaraidheulib.Winforms.MessageBox.Show("Can't load save file: " + _path + _name + Environment.NewLine + e.Message + Environment.NewLine + e.InnerException.Message + Environment.NewLine, "Error", Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Three, Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Three, "Abort", "Retry", "Load Backup", "Use Defaults");
+                        dr = Ruaraidheulib.Winforms.MessageBox.Show("Can't load save file: " + _path + _name + Environment.NewLine + e.Message + Environment.NewLine + e.InnerException.Message + Environment.NewLine, "Error", Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Four, Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Three, "Abort", "Retry", "Load Backup", "Defaults");
                     }
                     else
                     {
-                        dr = Ruaraidheulib.Winforms.MessageBox.Show("Can't load save file: " + _path + _name + Environment.NewLine + e.Message + Environment.NewLine, "Error", Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Three, Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Three, "Abort", "Retry", "Load Backup", "Use Defaults");
+                        dr = Ruaraidheulib.Winforms.MessageBox.Show("Can't load save file: " + _path + _name + Environment.NewLine + e.Message + Environment.NewLine, "Error", Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Four, Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Three, "Abort", "Retry", "Load Backup", "Defaults");
                     }
                     if (dr == "Abort")
                     {
