@@ -1,0 +1,75 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Cam_Program.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Disco" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">100, 100</Value>
+    </Setting>
+    <Setting Name="size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">800, 950</Value>
+    </Setting>
+    <Setting Name="URILT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://cam.lingbrae/porch</Value>
+    </Setting>
+    <Setting Name="URIRT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://cam.lingbrae/drive</Value>
+    </Setting>
+    <Setting Name="URILM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://cam.lingbrae/tunnel</Value>
+    </Setting>
+    <Setting Name="URIRM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://cam.lingbrae/patio</Value>
+    </Setting>
+    <Setting Name="URIRB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://cam.lingbrae/garage</Value>
+    </Setting>
+    <Setting Name="MQTT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hagrid.lingbrae</Value>
+    </Setting>
+    <Setting Name="UseMQTT" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MQTTSubs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#</Value>
+    </Setting>
+    <Setting Name="Darktheme" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="b1" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="b2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="b3" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="b4" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="b5" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="b6" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="Experimental" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BGColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">184, 204, 232</Value>
+    </Setting>
+    <Setting Name="Usecolor" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="v2wcount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="v2hcount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
