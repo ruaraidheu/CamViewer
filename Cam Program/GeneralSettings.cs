@@ -28,7 +28,7 @@ namespace Cam_Program
                 l.ShowDialog();
             }
         }
-        public void Init(bool? reload)
+        public void Init(bool? fullreload)
         {
             if (doreload)
             {
@@ -37,6 +37,7 @@ namespace Cam_Program
                 checkBox2.Checked = Camviewer.sv.Darktheme;
                 checkBox1.Checked = Camviewer.sv.Disco;
                 checkBox4.Checked = Camviewer.sv.LockAspectRatio;
+                checkBox5.Checked = Camviewer.sv.PluginsEnabled;
                 numericUpDown6.Value = Camviewer.sv.Wc;
                 numericUpDown1.Value = Camviewer.sv.Hc;
                 this.Version.Text = VersionInfo.Get().FullVersion;
@@ -48,6 +49,7 @@ namespace Cam_Program
                     checkBox2.ForeColor = Color.White;
                     checkBox3.ForeColor = Color.White;
                     checkBox4.ForeColor = Color.White;
+                    checkBox5.ForeColor = Color.White;
                     label1.ForeColor = Color.White;
                     label8.ForeColor = Color.White;
                 }
@@ -59,14 +61,15 @@ namespace Cam_Program
                     checkBox2.ForeColor = Color.Black;
                     checkBox3.ForeColor = Color.Black;
                     checkBox4.ForeColor = Color.Black;
+                    checkBox5.ForeColor = Color.Black;
                     label1.ForeColor = Color.Black;
                     label8.ForeColor = Color.Black;
                 }
-                if (reload == false)
+                if (fullreload == false)
                 {
                     Slot.DoReload = true;
                 }
-                if (reload == true)
+                if (fullreload == true)
                 {
                     Camviewer.Reload = true;
                 }
@@ -169,6 +172,22 @@ namespace Cam_Program
             {
                 Camviewer.sv.LockAspectRatio = checkBox4.Checked;
                 Init(false);
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked)
+            {
+                if (Ruaraidheulib.Winforms.MessageBox.ShowBL("Are you sure?"+Environment.NewLine+"This will allow third party code to be run.", "Allow Plugins", Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Two, Ruaraidheulib.Winforms.MessageBox.ButtonLayout.Two, "Yes", "No") == Ruaraidheulib.Winforms.MessageBox.ButtonLayout.One)
+                {
+                    Camviewer.sv.PluginsEnabled = checkBox5.Checked;
+                    Init(true);
+                }
+                else
+                {
+                    checkBox5.Checked = false;
+                }
             }
         }
     }

@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -258,12 +259,31 @@
             this.checkBox4.UseVisualStyleBackColor = true;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checkBox5.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.checkBox5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.checkBox5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.ForeColor = System.Drawing.Color.White;
+            this.checkBox5.Location = new System.Drawing.Point(120, 165);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(117, 24);
+            this.checkBox5.TabIndex = 40;
+            this.checkBox5.Text = "Allow Plugins";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
             // GeneralSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(343, 222);
+            this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
@@ -306,5 +326,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
     }
 }

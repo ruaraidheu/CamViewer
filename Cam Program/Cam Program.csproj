@@ -45,6 +45,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,6 +56,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>F79F6DA4D201B51B007E8BCE55BB70B2E8908C15</ManifestCertificateThumbprint>
@@ -75,9 +77,6 @@
     <DefineConstants>WINDOWS</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CamProgramDataLib">
-      <HintPath>..\CamProgramDataLib\bin\Release\CamProgramDataLib.dll</HintPath>
-    </Reference>
     <Reference Include="M2Mqtt.Mono">
       <HintPath>X:\Stuff\Downloads\m2mqtt-master\m2mqtt-master\bin\Debug\M2Mqtt.Mono\M2Mqtt.Mono.dll</HintPath>
     </Reference>
@@ -100,6 +99,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\V0.1.0.cs" />
     <Compile Include="Aspectratiohelper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +130,8 @@
     <Compile Include="GeneralSettings.Designer.cs">
       <DependentUpon>GeneralSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inbuilt\MJPEGViewer.cs" />
+    <Compile Include="Inbuilt\MQTT.cs" />
     <Compile Include="InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +257,18 @@
     <Content Include="Camview.ico" />
     <None Include="Resources\Splash-Camviewer.png" />
     <None Include="Resources\Camview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CamProgramDataLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

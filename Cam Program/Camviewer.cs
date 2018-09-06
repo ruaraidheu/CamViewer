@@ -158,7 +158,7 @@ namespace Cam_Program
     [Serializable()]
     public class Saveable : ISerializable
     {
-        private static string path = Environment.CurrentDirectory +System.IO.Path.DirectorySeparatorChar+"Config";
+        private static string path = Environment.CurrentDirectory + System.IO.Path.DirectorySeparatorChar + "Camviewer";
         private static string name = System.IO.Path.DirectorySeparatorChar + "config.cvsf";
         ModuleVersion version = v.VersionInfo.Get().ProductVersion;
         bool disco = false;
@@ -206,10 +206,6 @@ namespace Cam_Program
         }
         public void Kcon()
         {
-            if (v.VersionInfo.Get().Usingmono)
-            {
-                path = Environment.CurrentDirectory + System.IO.Path.DirectorySeparatorChar + "Camviewer"+System.IO.Path.DirectorySeparatorChar+"Config";
-            }
         }
 
 
