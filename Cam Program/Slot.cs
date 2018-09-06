@@ -54,7 +54,6 @@ namespace Cam_Program
             }
             p.TabIndex = 0;
             p.TabStop = false;
-            p.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.Controls.Add(p);
             v = new MQTTViewer();
             v.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(204)))), ((int)(((byte)(232)))));
@@ -63,7 +62,6 @@ namespace Cam_Program
             v.Name = "mqttViewer1";
             v.Size = this.Size;
             v.TabIndex = 5;
-            v.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.Controls.Add(v);
             v.ContextMenuStrip = contextMenuStrip2;
             if (s.Type == Slotdata.SlotType.Cam)

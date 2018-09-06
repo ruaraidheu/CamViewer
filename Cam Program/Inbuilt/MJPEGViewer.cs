@@ -14,6 +14,11 @@ namespace Cam_Program.Inbuilt
         PictureBox p;
         MjpegDecoder m;
         Aspectratiohelper arh;
+
+        public MJPEGViewer(Size s) : base(s)
+        {
+        }
+
         public override void Start()
         {
             API.V0.Initial.AddSlotData<MJPEGViewer>();
@@ -26,9 +31,9 @@ namespace Cam_Program.Inbuilt
             p.Margin = new System.Windows.Forms.Padding(0);
             p.Name = "pictureBox1";
             p.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(204)))), ((int)(((byte)(232)))));
-            //p.Size = this.Size;
+            p.Size = this.Size;
             p.Image = Properties.Resources.SplashCamviewer;
-            //Psplash = true;
+            Psplash = true;
             if (Camviewer.sv.LockAspectRatio)
             {
                 p.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -39,7 +44,7 @@ namespace Cam_Program.Inbuilt
             }
             p.TabIndex = 0;
             p.TabStop = false;
-            //p.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            //p.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             //this.Controls.Add(p);
             arh = new Aspectratiohelper(new Point(0), p);
             arh.Hide();

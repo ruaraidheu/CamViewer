@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,9 +31,12 @@ namespace API.V0
     }
     public class SlotObject
     {
+        public Size Size { get; set; }
+        public bool Psplash { get; set; }
         public string Name { get; set; } = "Plugin";
-        public SlotObject()
+        public SlotObject(Size s)
         {
+            Size = s;
             Initialize();
         }
         public virtual void Start()
@@ -50,6 +54,10 @@ namespace API.V0
         public virtual Control GetControl()
         {
             return null;
+        }
+        public void MouseDown()
+        {
+
         }
     }
 }
