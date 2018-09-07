@@ -33,10 +33,10 @@ namespace API.V0
     {
         public Size Size { get; set; }
         public bool Psplash { get; set; }
-        public string Name { get; set; } = "Plugin";
-        public SlotObject(Size s)
+        public string Name { get; set; } = "DefaultName";
+        public SlotObject(SlotParameters sp)
         {
-            Size = s;
+            Size = sp.Size;
             Initialize();
         }
         public virtual void Start()
@@ -59,5 +59,9 @@ namespace API.V0
         {
 
         }
+    }
+    public class SlotParameters
+    {
+        public Size Size { get; }
     }
 }
