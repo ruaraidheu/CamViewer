@@ -178,6 +178,9 @@ namespace Cam_Program
         List<Slotdata> sd = new List<Slotdata>();
 
         public static string Path { get => path; set => path = value; }
+        public static string Pathc { get; set; } = System.IO.Path.DirectorySeparatorChar + "Config";
+        public static string Pathl { get; set; } = System.IO.Path.DirectorySeparatorChar + "Log";
+        public static string Pathp { get; set; } = System.IO.Path.DirectorySeparatorChar + "Plugins";
         public static string Name { get => name; set => name = value; }
         public ModuleVersion Version { get => version; set { } }
         public bool Disco { get => disco; set => disco = value; }

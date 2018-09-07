@@ -30,7 +30,7 @@ namespace API.V0
     }
     public class SlotObject
     {
-        public string Name { get; set; } = "Plugin";
+        public string Name { get; set; } = "DefaultName";
         public SlotObject()
         {
             Initialize();
